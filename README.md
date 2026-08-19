@@ -2,102 +2,143 @@
 
 **Biological Intelligence Research & Neural Data Computing**
 
-Project NEURA is an experimental research initiative by **Beyond Geeks & Voyage** exploring the computational analysis of biological neuronal activity.
+Project NEURA is a research project by **Beyond Geeks & Voyage** focused on studying biological neuronal activity using software, data analysis, signal processing, and machine learning.
 
-The project begins on the software, infrastructure, signal-processing and data-analysis side: working with electrophysiological recordings from living neuronal systems and building reproducible pipelines for inspection, preprocessing, spike/activity analysis, visualisation and machine-learning experiments.
+The project starts with existing neuronal recordings instead of growing or working directly with biological tissue.
 
-## Current phase
+## Current Phase
 
-**Phase 0 — Data intake and exploratory analysis**
+We are currently in **Phase 0 — Data Exploration**.
 
-Initial work is focused on understanding the structure, scale and characteristics of research datasets such as neuronal recordings made available by FinalSpark.
+The first goal is to understand the neuronal datasets we receive and build tools that can analyse them.
 
-Planned early work includes:
+We will initially explore:
 
-- dataset inventory and metadata inspection;
-- channel/electrode signal visualisation;
-- quality and noise checks;
-- spike/event exploration;
-- firing-rate and inter-spike-interval analysis;
-- cross-channel synchronisation and correlation;
-- recurring-pattern and anomaly exploration;
-- reproducible experiment notebooks.
+* neuronal activity across different channels;
+* spike and firing patterns;
+* changes in activity over time;
+* noise and signal quality;
+* synchronisation between channels;
+* recurring activity patterns;
+* unusual or abnormal activity;
+* visualisation of neuronal recordings;
+* machine-learning experiments based on the recorded activity.
 
-## Research positioning
+## Project Scope
 
-Project NEURA is currently a computational research project. It does **not** grow, culture or directly stimulate biological neural tissue. The initial work is deliberately focused on software engineering, data infrastructure and analysis of supplied research recordings.
+Project NEURA is currently focused on the **software and data side of neuroscience research**.
 
-## FinalSpark data
+We are not currently growing neurons, culturing biological tissue, or performing wet-lab experiments.
 
-FinalSpark states that its Neuroplatform records electrophysiological activity continuously and provides Python-based research tooling. FinalSpark also makes recorded neuronal activity data available to researchers.
+Our work focuses on analysing neuronal recordings provided by research organisations and building software that helps us understand the data.
 
-**Important:** raw FinalSpark data is not stored in this repository. Third-party datasets should be kept locally under `data/raw/` and remain excluded from Git.
+## FinalSpark Dataset
 
-Any publication, presentation, research output or public result derived from FinalSpark-provided data should appropriately cite **FinalSpark** as the data source and follow any additional terms supplied with the dataset.
+Project NEURA will initially work with neuronal activity data provided by **FinalSpark**.
 
-## Repository layout
+FinalSpark will be credited as the data source in any research, presentation, publication, or public work that uses their dataset.
+
+Raw FinalSpark data will **not be uploaded to this public repository**.
+
+The dataset should remain stored locally inside:
+
+`data/raw/`
+
+and is excluded from Git.
+
+## Repository Structure
 
 ```text
-project-neura/
+PROJECT_NEURA/
 ├── config/
 ├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── derived/
 ├── docs/
 ├── notebooks/
 ├── scripts/
-├── src/neura/
+├── src/
 └── tests/
 ```
 
-## Quick start — Windows PowerShell
+## Getting Started — Windows
 
 ```powershell
-git clone <YOUR_REPOSITORY_URL>
-cd project-neura
+git clone https://github.com/BeyondGeeksKe/PROJECT_NEURA.git
+cd PROJECT_NEURA
+
 Set-ExecutionPolicy -Scope Process Bypass
+
 .\scripts\setup.ps1
+
 .\.venv\Scripts\Activate.ps1
+
 jupyter lab
 ```
 
-## Quick start — Linux/macOS
+## Getting Started — Linux/macOS
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
-cd project-neura
+git clone https://github.com/BeyondGeeksKe/PROJECT_NEURA.git
+
+cd PROJECT_NEURA
+
 chmod +x scripts/setup.sh
+
 ./scripts/setup.sh
+
 source .venv/bin/activate
+
 jupyter lab
 ```
 
-The default environment stays deliberately lightweight. Once the exact FinalSpark dataset format is known, install the optional electrophysiology stack:
+## Optional Neuroscience Tools
+
+Once we understand the exact format of the FinalSpark dataset, additional neuroscience tools can be installed using:
 
 ```bash
 python -m pip install -r requirements-neuro.txt
 ```
 
-## First notebook
+## First Notebook
 
-Open:
+Start with:
 
 `notebooks/00_environment_check.ipynb`
 
-Then, after the dataset arrives, begin with:
+This checks that the local environment is working correctly.
+
+Once the neuronal dataset is available, continue with:
 
 `notebooks/01_explore_recording.ipynb`
 
-## Data policy
+This will be used to begin exploring the recordings.
 
-Do not commit raw third-party recordings, credentials, access tokens or restricted research material. See [`docs/data-ethics.md`](docs/data-ethics.md).
+## Data Rules
+
+Do not upload:
+
+* raw FinalSpark datasets;
+* private research data;
+* passwords;
+* API keys;
+* access tokens;
+* private download links.
+
+More information is available in:
+
+`docs/data-ethics.md`
 
 ## Status
 
-Early research scaffold. Interfaces and analysis methods will change as the first dataset is inspected.
+Project NEURA is currently in its early research stage.
+
+The project structure, analysis methods, and tools will continue to develop as we begin working with real neuronal recordings.
 
 ## Organisation
 
-**Beyond Geeks & Voyage**  
+**Beyond Geeks & Voyage**
+
 https://beyondgeeksandvoyage.com
+
+GitHub:
+
+https://github.com/BeyondGeeksKe/PROJECT_NEURA

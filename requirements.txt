@@ -1,0 +1,12 @@
+numpy>=1.26
+scipy>=1.13
+pandas>=2.2
+matplotlib>=3.9
+scikit-learn>=1.5
+h5py>=3.11
+pyarrow>=17
+jupyterlab>=4.2
+ipykernel>=6.29
+tqdm>=4.66
+pydantic>=2.8
+python-dotenv>=1.0

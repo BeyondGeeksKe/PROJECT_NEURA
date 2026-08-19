@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project-neura"
+version = "0.1.0"
+description = "Computational research tooling for Project NEURA by Beyond Geeks & Voyage."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+authors = [
+  { name = "Beyond Geeks & Voyage" }
+]
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.13",
+  "pandas>=2.2",
+  "matplotlib>=3.9",
+  "scikit-learn>=1.5",
+  "h5py>=3.11",
+  "pyarrow>=17",
+  "tqdm>=4.66",
+  "pydantic>=2.8",
+  "python-dotenv>=1.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3",
+  "ruff>=0.6"
+]
+notebooks = [
+  "jupyterlab>=4.2",
+  "ipykernel>=6.29"
+]
+neuro = [
+  "mne>=1.8",
+  "spikeinterface[full]>=0.103"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

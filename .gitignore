@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets / local config
+.env
+.env.*
+!.env.example
+config/project.yaml
+
+# FinalSpark / research data
+# Raw or derived third-party neuronal data must never be committed unless
+# redistribution permission is explicitly confirmed in writing.
+data/raw/*
+data/processed/*
+data/derived/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/derived/.gitkeep
+!data/README.md
+
+# Large scientific files
+*.h5
+*.hdf5
+*.nwb
+*.zarr
+*.npy
+*.npz
+*.parquet
+*.feather
+*.csv.gz
+*.bin
+*.dat
+
+# Generated outputs
+outputs/
+reports/generated/

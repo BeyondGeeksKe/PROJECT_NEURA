@@ -1,0 +1,15 @@
+project:
+  name: "Project NEURA"
+  organisation: "Beyond Geeks & Voyage"
+
+paths:
+  raw_data: "./data/raw"
+  processed_data: "./data/processed"
+  derived_data: "./data/derived"
+  outputs: "./outputs"
+
+analysis:
+  # Fill these only after inspecting dataset metadata.
+  sampling_rate_hz: null
+  channel_count: null
+  voltage_unit: null
